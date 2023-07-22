@@ -1,0 +1,55 @@
+<head>
+    <style>
+        .message {
+            color: white;
+            text-align: center;
+            margin: 3em;
+        }
+
+        .highlight {
+            color: red;
+        }
+
+        .block-btn {
+            display: block;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <% if (locals.type=="created" ){ %>
+        <p class="message">Your quiz has been created! Quiz id: <span class="highlight">
+                <%= locals.id %>
+            </span></p>
+        <a href="/quiz/<%= locals.id %>/results"> <button class="btn block-btn">Check your friends results</button></a>
+        <button class="btn block-btn" id="share-btn">Share your quiz</button>
+        <% } else {%>
+            <p class="message">No quiz with id <span class="highlight">
+                    <%= locals.id %>
+                </span></p>
+            <% } %>
+</body>
+<script>
+    const shareButton = document.getElementById('share-btn')
+
+    if (shareButton) {
+        shareButton.addEventListener('click', () => {
+            if (navigator.share) {
+                navigator.share({
+                    url: `http://localhost:3000/quiz/<%=locals.id%>`
+                })
+            }
+            else {
+                navigator.clipboard.writeText(
+                    `http://localhost:3000/quiz/<%=locals.id%>`
+                )
+                alert("link copied")
+            }
+        })
+    }
+</script>

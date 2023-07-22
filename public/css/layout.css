@@ -1,0 +1,98 @@
+body {
+    font-family: "montserrat", sans-serif;
+    margin: 0;
+    background: linear-gradient(to top,
+            rgb(55, 48, 116),
+            rgba(55, 48, 116, 0.9),
+            rgba(55, 48, 116, 0.8));
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 100vh;
+
+}
+
+.navbar {
+    background-color: rgb(rgb(14, 41, 84));
+    padding: 2em 4em;
+    border-bottom: 2px solid black;
+}
+
+.nav_link {
+    width: 30%;
+    min-width: 200px;
+    margin: 0 auto;
+}
+
+.icon_svg {
+    height: 50px;
+    width: 50px;
+}
+
+.icon_name {
+    color: rgb(228, 228, 137);
+    font-size: 1.7em;
+}
+
+.flexbox {
+    display: flex;
+    /* horizontally */
+    justify-content: center;
+    /* vertically */
+    align-items: center;
+    gap: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    background-color: rgb(26, 38, 41);
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    padding: .75em 2.75em;
+    /*padding changes button size*/
+    margin: 1em auto;
+    /* color: rgb(214, 220, 155); */
+    color: rgb(225, 225, 137);
+    border-radius: 50px;
+}
+
+.btn:hover:not(.correct, .wrong) {
+    cursor: pointer;
+    background-color: rgba(26, 38, 41, 0.7);
+}
+
+.input {
+    border-radius: 40px;
+    border: 2px solid rgb(139, 139, 139);
+    padding: .25em 1.25em;
+    height: 2em;
+}
+
+.hide {
+    display: none !important;
+}
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 4px solid;
+    border-color: black black black transparent;
+    border-radius: 50%;
+    display: block;
+    margin: 2em auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+
+    /*define the animation spin*/
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}

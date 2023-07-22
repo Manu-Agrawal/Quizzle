@@ -1,0 +1,64 @@
+.quiz {
+    background-color: rgb(141, 135, 192);
+    width: 300px;
+    max-width: 80%;
+    margin: 4em auto;
+    padding: 1.5em;
+    font-family: "Roboto";
+    color: black;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 0 10px 2px;
+    /* x offset y offset blur spread */
+}
+
+.quiz_infos {
+    gap: 20%;
+    width: 70%;
+    margin: 0 auto 1em auto;
+}
+
+.quiz_info {
+    text-align: center;
+}
+
+.quiz_inputs {
+    flex-direction: column;
+}
+
+.btn {
+    /* added myself */
+    margin: 2em auto 0 auto;
+}
+
+.quiz_answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* fr means fraction of container */
+    /* eg - 1fr 1fr 1fr will make 3 columns */
+    gap: .5em;
+    margin: 3em 0;
+}
+
+.quiz_answer {
+    font-family: "Roboto";
+    font-size: 1em;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 2px;
+    margin: 0;
+}
+
+.quiz_title {
+    color: white;
+    width: 90%;
+    text-align: center;
+    margin: 0.5em auto;
+}
+
+.correct {
+    background-color: rgb(23, 180, 23);
+}
+
+.wrong {
+    background-color: rgb(238, 30, 30);
+}

@@ -1,0 +1,25 @@
+<head>
+    <link rel="stylesheet" href="css/create.css">
+</head>
+<section class="quiz">
+
+    <div class="quiz_infos flexbox">
+        <p class="quiz_info">
+            <!-- giving spans ids because we want to select and change them from js file. -->
+            Question
+            <span id="current_question">0</span>
+            /
+            <span id="total_questions">3</span>
+        </p>
+    </div>
+    <div class="hide quiz_content" id="quiz-content">
+        <div class="quiz_question" id="quiz-question"></div>
+        <div class="quiz_answers" id="quiz-answers"></div>
+    </div>
+    <div class="quiz_inputs flexbox">
+        <input type="text" id="name-input" placeholder="Enter your name" class="quiz_info input">
+        <input type="text" id="title-input" placeholder="Enter your quiz title" class="quiz_info input">
+        <button class="btn" id="start-btn">Start</button>
+    </div>
+</section>
+<script type="module" src="/js/create-script.js"></script>

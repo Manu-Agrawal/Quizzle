@@ -1,0 +1,60 @@
+<head>
+    <link rel="stylesheet" href="/css/create.css">
+
+    <script type="module" src="/js/quiz-script.js" defer></script>
+    <!-- defer -> so that script runs only after body is loaded -->
+</head>
+
+<body>
+    <div>
+        <h1 class="quiz_title">
+            <%=locals.title%>
+        </h1>
+        <h3 class="quiz_title">by <%=locals.author%>
+        </h3>
+    </div>
+    <section class="quiz">
+
+        <div class="quiz_infos flexbox">
+            <p class="quiz_info">
+                <!-- giving spans ids because we want to select and change them from js file. -->
+                Question
+                <span id="current_question">0</span>
+                /
+                <span id="total_questions">3</span>
+            </p>
+            <p class="quiz_info">
+                score:
+                <span id="current-score">0</span>
+            </p>
+        </div>
+        <div class="hide quiz_content" id="quiz-content">
+            <div class="quiz_question" id="quiz-question"></div>
+            <div class="quiz_answers" id="quiz-answers"></div>
+        </div>
+        <div class="quiz_inputs flexbox">
+            <input type="text" id="name-input" placeholder="Enter your name" class="quiz_info input">
+
+            <button class="btn" id="start-btn">Start</button>
+            <button class="btn hide" id="next-btn">Next</button>
+            <a href="/"><button class="btn hide" id="back-btn">Back to home</button></a>
+
+        </div>
+
+    </section>
+    <input type="text" id="hidden-author" style="display: none" value="<%=locals.author%>">
+    <!-- is author and locals.author same? -->
+    <input type="text" id="hidden-data" style="display: none" value="<%=locals.quizData%>">
+    <input type="text" id="hidden-id" style="display: none" value="<%=locals.quizId%>">
+
+    <script>
+        const hiddenAuthor = document.getElementById('hidden-author')
+        const hiddenData = document.getElementById('hidden-data')
+        const hiddenId = document.getElementById('hidden-id')
+
+        const author = hiddenAuthor.value
+        const quizData = JSON.parse(hiddenData.value)
+        const quizId = hiddenId.value
+        // parse because we sent it as string and need to use as array
+    </script>
+</body>

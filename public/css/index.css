@@ -1,0 +1,25 @@
+body {
+    color: white;
+}
+
+.section {
+    padding: 2em 1em;
+    text-align: center;
+    margin: auto;
+    max-width: 40%;
+}
+
+.section_header {
+    text-align: center;
+    font-size: 2em;
+}
+
+.section_text {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.input {
+    display: inline;
+    margin: 1em 1em;
+}

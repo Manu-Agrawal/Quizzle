@@ -1,0 +1,71 @@
+<head>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="module" src="/js/delete-script.js" defer></script>
+    <style>
+        .all_quizes {
+            display: inline-table;
+            max-width: fit-content;
+        }
+
+        .quiz_elements {
+            text-align: left;
+            display: inline-table;
+            width: 200px;
+            height: 200px;
+            margin: 2em 2em;
+            padding: 1em;
+            background-color: rgb(141, 135, 192);
+            color: black;
+            box-shadow: 0 0 10px 2px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<section class="section">
+    <h1 class="section_header">Test your friends!</h1>
+    <p class="section_text">Create a quiz to test your friends and see their results!</p>
+    <a href="/create"><button class="btn section_btn">Create a quiz</button></a>
+</section>
+
+<section class="section">
+    <h1 class="section_header">Play a quiz!</h1>
+
+    <input class="input" id="search-id" type="text" placeholder="Enter quiz id">
+    <button id="search-btn" class="btn section_btn">Search</button>
+</section>
+
+<section class="">
+    <h1 class="section_header">All quizes!</h1>
+    <div class="all_quizes" id="all-quizes">
+    </div>
+    <input type="text" id="hidden-quizs" style="display: none" value="<%= locals.quizs%>">
+
+</section>
+
+<script>
+    const hiddenQuizs = document.getElementById('hidden-quizs')
+
+    const quizs = JSON.parse(hiddenQuizs.value)
+
+    console.log(quizs)
+
+</script>
+
+<script>
+    const searchButton = document.getElementById('search-btn')
+
+    searchButton.addEventListener('click', () => {
+        const quizId = document.getElementById('search-id')
+        const id = quizId.value
+
+        if (id) {
+            console.log(id)
+            window.location.href = `/quiz/${id}`;
+        }
+        else {
+            alert("Enter an id")
+        }
+
+    })
+
+</script>

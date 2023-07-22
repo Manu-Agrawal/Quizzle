@@ -1,0 +1,44 @@
+<head>
+    <style>
+        .results {
+            background-color: rgb(141, 135, 192);
+            color: black;
+            text-align: center;
+            margin: 6em auto;
+            padding: 1.5em;
+            width: 350px;
+            max-width: 80%;
+            border-radius: 6px;
+            box-shadow: 0 0 10px 2px;
+        }
+
+        .results_header {
+            margin-bottom: 1em;
+        }
+
+        p {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="results">
+        <h1 class="results_header">
+            Results
+        </h1>
+        <%if(locals.results.length> 0) {%>
+            <% locals.results.forEach(result=> { %>
+                <div class="flexbox">
+                    <p>
+                        <%= Object.keys(JSON.parse(JSON.stringify(result))) %>:
+                            <%=Object.values(JSON.parse(JSON.stringify(result)))%>/3
+                    </p>
+                </div>
+                <%}); %>
+                    <% }else{ %>
+                        <p>No one has tried your quiz yet!</p>
+                        <% } %>
+
+    </section>
+</body>
