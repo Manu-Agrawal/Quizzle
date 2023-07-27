@@ -12,6 +12,8 @@ quizs.forEach(element => {
 
     seeResults.classList.add('all_quiz_btn')
     deleteQuiz.classList.add('all_quiz_btn')
+    seeResults.classList.add('btn')
+    deleteQuiz.classList.add('btn')
     
     title.innerText = `title: ${element.title}`
     author.innerText = `author: ${element.author}`
