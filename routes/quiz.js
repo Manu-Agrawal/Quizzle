@@ -3,6 +3,16 @@ import quizModel from "../Models/q.js";
 import { v4 } from 'uuid'
 const router = express.Router()
 
+
+router.delete("/delete", async (req, res) => {
+    const { id } = req.body
+
+    const deleted = await quizModel.findOneAndDelete({ quizId: JSON.parse(id) })
+
+    console.log(deleted)
+})
+
+
 router.post('/', async (req, res) => {
     const { info, data } = req.body
     const quiz = await quizModel.create({
