@@ -22,12 +22,18 @@ quizs.forEach(element => {
     })
     deleteQuiz.addEventListener('click', async () => {
 
-        // window.location.href = "/quiz/${id}/results"
+        alert(`Deleted quiz with id: ${id}`)
 
-        // const res = await fetch(`http://localhost:3000/quiz/${id}/delete`, {
-        //     method: ""
-        // })
-        // const response = await res.json()
+        const resp = await fetch('http://localhost:3000/quiz/delete', {
+            method: 'DELETE',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                id: JSON.stringify(id)
+            })
+        })
+            .then(window.location.href = "/")
     })
 
     quiz.appendChild(title)
