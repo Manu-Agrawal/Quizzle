@@ -96,3 +96,35 @@ a {
         rotate: 360deg;
     }
 }
+
+.all_quiz_btn {
+    background-color: rgb(26, 38, 41);
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    padding: .75em 2.75em;
+    /*padding changes button size*/
+    margin: .5em .5em;
+    /* color: rgb(214, 220, 155); */
+    color: white;
+    border-radius: 50px;
+    width: 60%;
+    text-align: center;
+}
+
+.all_quizes {
+    display: inline-table;
+    max-width: fit-content;
+}
+
+.quiz_elements {
+    text-align: center;
+    display: inline-table;
+    width: 200px;
+    height: 200px;
+    margin: 2em 2em;
+    padding: 1em;
+    background-color: rgb(141, 135, 192);
+    color: black;
+    box-shadow: 0 0 10px 2px;
+    border-radius: 10px;
+}
