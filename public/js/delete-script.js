@@ -10,6 +10,9 @@ quizs.forEach(element => {
     const deleteQuiz = document.createElement('button')
     const id = element.quizId
 
+    seeResults.classList.add('all_quiz_btn')
+    deleteQuiz.classList.add('all_quiz_btn')
+    
     title.innerText = `title: ${element.title}`
     author.innerText = `author: ${element.author}`
     quizId.innerText = `quiz id: ${element.quizId}`
