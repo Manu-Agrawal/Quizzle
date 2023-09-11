@@ -1,1 +1,7 @@
-
+![Screenshot (452)](https://github.com/Manu-Agrawal/Quizzle/assets/72336303/f007413b-98a6-4cc0-8ab2-1999f52e10ff)
+![Screenshot (453)](https://github.com/Manu-Agrawal/Quizzle/assets/72336303/425efb2c-8e3c-4869-9d1a-a322f15fa83c)
+![Screenshot (454)](https://github.com/Manu-Agrawal/Quizzle/assets/72336303/8fe510c9-0c42-4e57-96e5-8fef400cbc8b)
+![Screenshot (455)](https://github.com/Manu-Agrawal/Quizzle/assets/72336303/f27ecafb-dc82-4417-bfc8-7d6b60c8c2ac)
+![Screenshot (456)](https://github.com/Manu-Agrawal/Quizzle/assets/72336303/e276960a-316f-4f18-9553-38775787d56c)
+![Screenshot (457)](https://github.com/Manu-Agrawal/Quizzle/assets/72336303/43d66224-862c-42b1-98ef-df79926468cc)
+![Screenshot (458)](https://github.com/Manu-Agrawal/Quizzle/assets/72336303/76ca9cc3-1c0b-4f13-a2e8-8e00c7d62ffa)
